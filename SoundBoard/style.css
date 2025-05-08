@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #C9A0DC;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+}
+
+.audioBox{
+  width:150px;
+  height:60px;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
