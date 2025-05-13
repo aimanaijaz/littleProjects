@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: lightgray;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:25px;
+  margin-top:50px;
+}
+
+
+.box{
+  border-radius: 10px;
+  border:2px solid gray;
+  height:60px;
+  width:600px;
+  overflow: hidden;
+  padding-left:25px;
+  position: relative;
+  transition: height 0.3s ease;
+  z-index: 2;
+}
+
+p{
+  margin:0;
+  padding:0;
+}
+
+.question{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.fa-circle-xmark, .fa-angle-down{
+  position:absolute;
+  right:20px;
+  top:20px;
+  cursor: pointer;
+  display:none;
+}
+
+.fa-comment{
+  display:none;
+}
+
+.box.active{
+  background-color: white;
+  height:100px;
+  gap:25px;
+}
+
+.box.active .fa-circle-xmark{
+  display: block;
+}
+
+.box.active .fa-comment {
+  display: block;
+  position: absolute;
+  font-size: 80px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.box.active .fa-comment.blue {
+  color: skyblue;
+  left: -10px;
+  top: -20px;
+  transform: rotateY(180deg);
+}
+
+.box.active .fa-comment.green {
+  color: lightgreen;
+  left: 20px;
+  top: 15px;
+}
+
+.box:not(.active) .fa-angle-down{
+  display: block;
+}
+
+
+
