@@ -1,0 +1,60 @@
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto mono", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: purple;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      gap: 32%;
+    }
+
+    .smallText {
+      font-size: 10px;
+      min-width: 110px;
+      ;
+    }
+
+    .twitter,
+    .youtube,
+    .facebook {
+      font-size: 24px;
+      padding: 5%;
+    }
+
+    .twitter i,
+    .youtube i,
+    .facebook i {
+      font-size: 32px;
+      min-height: 32px;
+      ;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+
+      .twitter,
+      .youtube,
+      .facebook {
+        width: 100%;
+      }
+
+      .container {
+        flex-direction: column;
+        gap: unset;
+      }
+    }
