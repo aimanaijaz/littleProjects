@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    position: relative;
+}
+.top{
+    height:50vh;
+    width:100vw;
+    background-color: aqua;
+    margin:0;
+}
+
+.bottom{
+    height:50vh;
+    width:100vw;
+    background-color: navy;
+    margin:0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid gray;
+    position: absolute;
+    top:47vh;
+    left:45vw;
+    background-color: white;
+    padding:20px 20px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    margin:0;
+    padding:0;
+    transition: display 0.3s ease;
+}
+
+.listItem{
+    list-style: none;
+}
+
+i{
+    font-size: 14px;
+    color:black;
+    margin-left:20px;
+}
+
+.fa-bars{
+    display:none;
+}
+
+.menuContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuContainer.closed .list{
+    display:none;
+}
+
+.menuContainer.closed i{
+    margin-left:0;
+}
+
+.menuContainer.closed .fa-bars{
+    display: block;
+}
+
+.menuContainer.closed .fa-xmark{
+    display:none;
+}
