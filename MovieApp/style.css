@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color:white;
+  background-color: #1F2342;
+}
+
+.searchContainer{
+  display:flex;
+  justify-content:end;
+  width:100vw;
+  padding:20px;
+  background-color: #2F375E;
+}
+
+input{
+  height:30px;
+  background-color: #2F375E;
+  border:1px solid #1F2342;
+  border-radius: 15px;
+  color:white;
+  outline:0;
+  padding:15px;
+  font-size: 14px;;
+}
+
+
+.moviesContainer{
+  display:flex;
+  flex-wrap: wrap;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  width:75vw;
+  background-color: #1F2342;
+}
+
+img{
+  width:100%;
+  height: auto;
+  display:block;
+}
+
+.movie {
+  flex: 0 1 250px;  /* Don't grow, shrink if needed, base width 200px */
+  border: 1px solid #2F375E;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #2F375E;
+  height:450px;
+}
+
+.movieinfo{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:30px
+}
+
+.movieRating{
+  background-color: #1F2342;
+  padding:5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
