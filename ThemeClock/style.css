@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100vw;
+  height:100vh;
+  gap:90px;
+}
+
+.mode{
+  border-radius: 10px;
+  padding:10px 15px;
+  outline:0;
+  color: white;
+  background-color: black;
+}
+
+p{
+  padding:0;
+  margin: 0;
+}
+
+.timeHere{
+  font-size: 48px;
+}
+
+.dateHere{
+  font-size: 16px;
+  text-align: center;
+}
+
+.container.dark{
+  background-color: black;
+  color: white;
+}
+
+.container.dark .mode{
+  background-color: white;
+  color: black;
+}
+
+.container.dark .analogClock{
+  border: 8px solid white;
+}
+
+.container.dark .hand{
+  background: white;
+}
+
+.container.dark .hand.second{
+  background: red;
+}
+
+.analogClock{
+  width:200px;
+  height:200px;
+  border:8px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.hand{
+  width:50%;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform-origin: 0% 50%;
+  transition: all 0.05s ease-in-out;
+}
+
+.second{
+  background: red;
+  height: 1px;
+}
+
+.minute{
+  background: gray;
+  height: 2px;
+}
+
+.hour{
+  background: black;
+  height: 4px;
+  width: 35%;
+}
