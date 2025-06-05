@@ -80,6 +80,19 @@ a:hover{
   text-align: center;
   width:100vw;
   min-height: clamp(300px, 60vh, 750px); /* responsive height */
+  z-index: -2;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  width:100vw;
+  min-height: clamp(300px, 60vh, 750px);
 }
 
 .banner h1 {
