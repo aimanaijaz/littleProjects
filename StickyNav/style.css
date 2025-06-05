@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: scroll;
+  margin: 0;
+  color:white;
+}
+
+nav, .text {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbox {
+  width: 100vw;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center; 
+  z-index: 1000; 
+  transition: background-color 0.5s ease;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.5s ease;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+}
+
+ul{
+  display:flex;
+  gap:50px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+a:hover{
+  color:red;
+}
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  text-align: center;
+  width:100vw;
+  min-height: clamp(300px, 60vh, 750px); /* responsive height */
+}
+
+.banner h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+.banner h4 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin:0;
+}
+.navbox.reachEnd{
+  background-color: white;
+  color:black;
+}
+
+.navbox.reachEnd nav{
+  background-color: white;
+  color:black;
+}
+
+.navbox.reachEnd a{
+  color:black;
+}
+
+.navbox.reachEnd a:hover{
+  color:red;
+}
+
+.text{
+  color:black;
+}
+
+p{
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing:1.2px;
+ 
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: black;
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: none; /* toggle this via JS later for hamburger */
+  }
+
+  .nav-open ul {
+    display: flex;
+  }
+  
+  .navbox{
+    height:50px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .nav-open nav ul {
+    display: flex;
+  }
+
+}
